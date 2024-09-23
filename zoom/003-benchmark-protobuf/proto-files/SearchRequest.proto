@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option cc_enable_arenas = true;
+
+message SearchRequest {
+  repeated string query = 1;
+  repeated int32 page_number = 2;
+}

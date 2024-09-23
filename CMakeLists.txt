@@ -29,3 +29,4 @@ include_directories(${BENCHMARK_INCLUDE_DIRS})
 
 add_subdirectory(zoom/001-benchmark-normal-use)
 add_subdirectory(zoom/002-benchmark-logs)
+add_subdirectory(zoom/003-benchmark-protobuf)

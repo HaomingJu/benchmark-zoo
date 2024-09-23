@@ -54,3 +54,9 @@ BENCHMARK(BM_protobuf_smart_ptr_repeated);
 BENCHMARK(BM_protobuf_smart_ptr_repeated_arena);
 
 BENCHMARK_MAIN();
+
+/*
+ * 参考BM_protobuf_obj_repeated和BM_protobuf_smart_ptr_repeated可知如下结论
+ * protobuf性能瓶颈在于repeated类型的字段的多次调用add_*函数导致小内存不断创建,移动,销毁
+ * 在使用arena接管Protobuf对象的内存管理后，由arena统一管理内存可提高add_*函数的速度
+ */
